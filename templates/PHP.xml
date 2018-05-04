@@ -5,4 +5,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="creaf" value="self::createReturn(false, null, '$END$');" description="createReturn false" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
