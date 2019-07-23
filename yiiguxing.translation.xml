@@ -1,0 +1,22 @@
+<application>
+  <component name="AppStorage">
+    <histories>
+      <item value="获取" />
+      <item value="已完成" />
+      <item value="status" />
+      <item value="start update" />
+      <item value="false" />
+      <item value="createreturn" />
+      <item value="youzanorder" />
+      <item value="class youzanyunservice extends baseservice { static function getaccesstoken($appid = null){ if($appid){ $data = m('youzanapp')-&gt;where(['id' =&gt; $appid])-&gt;find(); }else{ $data = m('youzanapp')-&gt;find(); } if(!$data){ return self::createreturn(false, null, '找不到应用'); } if($data['expires'] &gt; time()){ return $data['access_token']; }else{ return self::refreshaccesstoken($appid); } } static function refreshaccesstoken($appid = null){ if($appid){ $data = m('youzanapp')-&gt;where(['id' =&gt; $appid])-&gt;find(); }else{ $data = m('youzanapp')-&gt;find(); } $token = new token($data['client_id'], $data['client_secret']); $accesstoken = $token-&gt;gettoken($data['authorize_type'], ['kdt_id' =&gt; $data['grant_id']]); m('youzanapp')-&gt;where(['id' =&gt; $data['id']])-&gt;save([ 'access_token' =&gt; $accesstoken['access_token'], 'expires' =&gt; floor($accesstoken['expires']/1000), 'scope' =&gt; $accesstoken['scope'], 'authority_id' =&gt; $accesstoken['authority_id'] ]); return $accesstoken['access_token']; } /** * 获取有赞订单 已完成 * * @param $start_time * @param $end_time * @return array */ static function getorders($start_time, $end_time){ $accesstoken = self::getaccesstoken(); $client = new client($accesstoken); $method = 'youzan.trades.sold.get'; $apiversion = '4.0.0'; //设置参数 $params = [ 'status' =&gt; 'trade_success', 'start_update' =&gt; date('y-m-d h:i:s', $start_time), 'end_update' =&gt; date('y-m-d h:i:s', $end_time) ]; echo &quot;&lt;pre&gt;&quot;; print_r($params); echo &quot;&lt;/pre&gt;&quot;; $response = $client-&gt;post($method, $apiversion, $params); if($response['code'] == 200){ return self::createreturn(true, $response['data']); }else{ return self::createreturn(false, $response); } } static function saveorder($data){ $count = m('youzanorder')-&gt;where(['tid' =&gt; $data['order_info']['tid']])-&gt;count(); if(!$count){ m('youzanorder')-&gt;add([ 'tid' =&gt; $data['order_info']['tid'], 'status' =&gt; $data['order_info']['status'], 'status_str' =&gt; $data['order_info']['status_str'], 'total_fee' =&gt; $data['pay_info']['total_fee'], 'payment' =&gt; $data['pay_info']['payment'], 'phone' =&gt; $data['buyer_info']['buyer_phone'], 'created' =&gt; $data['order_info']['created'], 'success_time' =&gt; $data['order_info']['success_time'], ]); } }&#10;}" />
+      <item value="save Order" />
+      <item value="哈哈" />
+    </histories>
+    <option name="languageScores">
+      <map>
+        <entry key="CHINESE" value="9" />
+        <entry key="ENGLISH" value="9" />
+      </map>
+    </option>
+  </component>
+</application>
