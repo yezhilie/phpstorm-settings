@@ -10,4 +10,14 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="page" value="$page = I('get.page', 1);" description="page" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="limit" value="$limit = I('get.limit', 20$END$);" description="limit" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
