@@ -20,4 +20,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="pagedata" value="$data = [&#10;    'page' =&gt; $page,&#10;    'limit' =&gt; $limit,&#10;    'items' =&gt; $items,&#10;    'total_items' =&gt; $total_items,&#10;    'total_pages' =&gt; ceil($total_items/$limit)&#10;];" description="pagedata" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
