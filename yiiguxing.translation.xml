@@ -1,6 +1,7 @@
 <application>
   <component name="AppStorage">
     <histories>
+      <item value="TIME" />
       <item value="$TARGET TYPE" />
       <item value="获取" />
       <item value="已完成" />
