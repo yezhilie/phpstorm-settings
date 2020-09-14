@@ -1,6 +1,8 @@
 <application>
   <component name="AppStorage">
     <histories>
+      <item value="$header" />
+      <item value="$HEADER" />
       <item value="TIME" />
       <item value="$TARGET TYPE" />
       <item value="获取" />
@@ -17,7 +19,7 @@
     <option name="languageScores">
       <map>
         <entry key="CHINESE" value="10" />
-        <entry key="ENGLISH" value="10" />
+        <entry key="ENGLISH" value="11" />
       </map>
     </option>
   </component>
