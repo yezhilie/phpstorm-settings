@@ -1,6 +1,9 @@
 <application>
   <component name="AppStorage">
     <histories>
+      <item value="温暖" />
+      <item value="data 15" />
+      <item value="this is English" />
       <item value="tomorrow" />
       <item value="torommow" />
       <item value="完成" />
@@ -26,8 +29,8 @@
     </histories>
     <option name="languageScores">
       <map>
-        <entry key="CHINESE" value="18" />
-        <entry key="ENGLISH" value="19" />
+        <entry key="CHINESE" value="21" />
+        <entry key="ENGLISH" value="21" />
       </map>
     </option>
   </component>
