@@ -882,7 +882,7 @@
     </option>
     <option name="MAGIC_MEMBER_ACCESS">
       <value>
-        <option name="FOREGROUND" value="cc5a1f" />
+        <option name="FOREGROUND" value="ffc66d" />
       </value>
     </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
@@ -1009,6 +1009,11 @@
     </option>
     <option name="PHP_SCRIPTING_BACKGROUND">
       <value />
+    </option>
+    <option name="PHP_STATIC_METHOD">
+      <value>
+        <option name="FOREGROUND" value="ffc66d" />
+      </value>
     </option>
     <option name="PHP_STRING">
       <value />
