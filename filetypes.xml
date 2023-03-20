@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="17">
     <extensionMap>
       <mapping pattern="tools" type="PLAIN_TEXT" />
+      <mapping pattern="xx" type="PLAIN_TEXT" />
       <mapping ext="s2input" type="PLAIN_TEXT" />
       <mapping ext="scriptable" type="PLAIN_TEXT" />
       <mapping ext="copy" type="PLAIN_TEXT" />
