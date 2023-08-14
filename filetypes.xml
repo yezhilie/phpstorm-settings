@@ -5,6 +5,7 @@
       <mapping pattern="xx" type="PLAIN_TEXT" />
       <mapping ext="s2input" type="PLAIN_TEXT" />
       <mapping ext="scriptable" type="PLAIN_TEXT" />
+      <mapping ext="pem" type="PLAIN_TEXT" />
       <mapping ext="copy" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
